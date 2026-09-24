@@ -1,0 +1,27 @@
+{
+  "service": "heritage-tree-harvest-lineage",
+  "entities": [
+    "tree_record",
+    "harvest_lot",
+    "custody_transfer",
+    "care_action"
+  ],
+  "events": [
+    "TREE_ASSESSED",
+    "LOT_WEIGHED",
+    "DESTINATION_ASSIGNED",
+    "DAMAGE_OBSERVED",
+    "CARE_COMPLETED"
+  ],
+  "envelope": {
+    "required": [
+      "event_id",
+      "event_type",
+      "occurred_at",
+      "aggregate_id",
+      "version",
+      "payload"
+    ],
+    "version_minimum": 1
+  }
+}

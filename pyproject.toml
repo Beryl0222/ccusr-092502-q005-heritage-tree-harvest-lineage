@@ -1,0 +1,6 @@
+[project]
+name = "heritage-tree-harvest-lineage"
+version = "0.1.0"
+description = "古树采后责任谱系的领域事件边界"
+requires-python = ">=3.11"
+dependencies = []
