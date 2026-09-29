@@ -1,10 +1,14 @@
 {
-  "event_id": "heritage-tre-sample-001",
+  "event_id": "evt-tree_assessed-sample-001",
   "event_type": "TREE_ASSESSED",
   "occurred_at": "2026-09-24T09:00:00+08:00",
-  "aggregate_id": "tree_record-001",
+  "aggregate_id": "assess-0001-a2026",
   "version": 1,
   "payload": {
+    "tree_id": "tree-0001",
+    "year": "2026",
+    "load_capacity_kg": 100.0,
+    "assessor": "林技师",
     "note": "用于校验基础事件信封"
   }
 }

@@ -2,15 +2,40 @@
   "service": "heritage-tree-harvest-lineage",
   "entities": [
     "tree_record",
+    "cultivar",
+    "annual_assessment",
+    "picking_range",
+    "crew",
+    "harvest_operation",
     "harvest_lot",
+    "quarantine",
+    "damage_observation",
     "custody_transfer",
-    "care_action"
+    "care_action",
+    "fruit_disposition"
   ],
   "events": [
+    "CULTIVAR_REGISTERED",
+    "TREE_REGISTERED",
+    "CREW_REGISTERED",
     "TREE_ASSESSED",
+    "PICKING_RANGE_GRANTED",
+    "TREE_ANOMALY_FLAGGED",
+    "TREE_RETURNED_TO_SERVICE",
+    "OPERATION_STARTED",
+    "OPERATION_PAUSED",
+    "OPERATION_COMPLETED",
+    "DROPPED_FRUIT_RECORDED",
     "LOT_WEIGHED",
+    "BATCH_QUARANTINED",
+    "BATCH_ADMITTED",
+    "BATCH_REJECTED",
     "DESTINATION_ASSIGNED",
     "DAMAGE_OBSERVED",
+    "DAMAGE_OBSERVATION_CORRECTED",
+    "CUSTODY_TRANSFERRED",
+    "CARE_PLANNED",
+    "CARE_PLAN_REVISED",
     "CARE_COMPLETED"
   ],
   "envelope": {
@@ -23,5 +48,23 @@
       "payload"
     ],
     "version_minimum": 1
-  }
+  },
+  "id_prefixes": {
+    "cultivar": "cultivar-",
+    "tree_record": "tree-",
+    "annual_assessment": "assess-",
+    "picking_range": "range-",
+    "crew": "crew-",
+    "harvest_operation": "op-",
+    "harvest_lot": "batch-",
+    "damage_observation": "obs-",
+    "custody_transfer": "xfer-",
+    "care_action": "care-"
+  },
+  "destination_channels": [
+    "VISITOR_PICKING",
+    "RESEARCH_SAMPLE",
+    "PUBLIC_DONATION"
+  ],
+  "notes": "业务事实只追加，更正与解决一律以新事件表达；称重批次在标识冲突时先隔离，不改写旧记录。"
 }
