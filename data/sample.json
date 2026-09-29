@@ -1,10 +1,14 @@
 {
-  "event_id": "heritage-tre-sample-001",
+  "event_id": "EVT-2026-000001",
   "event_type": "TREE_ASSESSED",
   "occurred_at": "2026-09-24T09:00:00+08:00",
-  "aggregate_id": "tree_record-001",
+  "aggregate_id": "ASMT-2026-000001",
   "version": 1,
   "payload": {
+    "tree_id": "TREE-2026-000001",
+    "year": 2026,
+    "vigor": "NORMAL",
+    "capacity_kg": 120.0,
     "note": "用于校验基础事件信封"
   }
 }

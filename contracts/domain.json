@@ -1,17 +1,57 @@
 {
   "service": "heritage-tree-harvest-lineage",
+  "id_prefixes": {
+    "tree_record": "TREE",
+    "cultivar": "CV",
+    "crew": "CREW",
+    "annual_assessment": "ASMT",
+    "harvest_window": "WIN",
+    "harvest_lot": "LOT",
+    "weighing": "WGH",
+    "custody_transfer": "XFER",
+    "damage_observation": "DAM",
+    "care_action": "CARE",
+    "quarantine": "QUAR",
+    "event": "EVT"
+  },
   "entities": [
     "tree_record",
+    "cultivar",
+    "crew",
+    "annual_assessment",
+    "harvest_window",
     "harvest_lot",
+    "weighing",
     "custody_transfer",
-    "care_action"
+    "damage_observation",
+    "care_action",
+    "quarantine"
   ],
   "events": [
+    "CULTIVAR_REGISTERED",
+    "CREW_REGISTERED",
+    "TREE_REGISTERED",
     "TREE_ASSESSED",
+    "HARVEST_WINDOW_OPENED",
+    "LOT_CREATED",
     "LOT_WEIGHED",
+    "LOT_QUARANTINED",
+    "LOT_RELEASED",
+    "LOT_DISCARDED",
     "DESTINATION_ASSIGNED",
+    "CUSTODY_TRANSFERRED",
     "DAMAGE_OBSERVED",
-    "CARE_COMPLETED"
+    "OBSERVATION_CORRECTED",
+    "TREE_SUSPENSION_TOGGLED",
+    "CARE_PLANNED",
+    "CARE_COMPLETED",
+    "CARE_CANCELLED"
+  ],
+  "destinations": [
+    "VISITOR_PICK",
+    "RESEARCH_SAMPLE",
+    "DONATION",
+    "SALVAGE_DISCARD"
   ],
   "envelope": {
     "required": [
@@ -22,6 +62,7 @@
       "version",
       "payload"
     ],
-    "version_minimum": 1
+    "version_minimum": 1,
+    "causation_hint": "离线称重重传时客户端事件号必须保持不变；同号不同内容按冲突隔离，不覆盖旧记录"
   }
 }
